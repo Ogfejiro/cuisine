@@ -182,7 +182,7 @@ const DelicacyCard = ({ delicacy, onSelectDelicacy }) => {
       onClick={() => onSelectDelicacy(delicacy.id)}
     >
       {/* Delicacy Image */}
-      <div className="relative w-full h-56 mb-5 rounded-lg overflow-hidden border-2 border-transparent group-hover:border-orange-500 transition-colors duration-300">
+      <div className="relative w-full h-56 mb-5 rounded-lg overflow-hidden border-2 border-transparent group-hover:border-orange-500 transition-colors duration-300" data-aos="fade-in">
         <Image
           src={delicacy.imageUrl}
           alt={delicacy.name}
@@ -194,12 +194,12 @@ const DelicacyCard = ({ delicacy, onSelectDelicacy }) => {
       </div>
 
       {/* Delicacy Name */}
-      <h3 className="text-3xl font-bold text-gray-900 mb-3 text-center tracking-tight">
+      <h3 className="text-3xl font-bold text-gray-900 mb-3 text-center tracking-tight" data-aos="fade-right">
         {delicacy.name}
       </h3>
 
       {/* Delicacy Description */}
-      <p className="text-gray-700 text-base text-center mb-6 flex-grow leading-relaxed">
+      <p className="text-gray-700 text-base text-center mb-6 flex-grow leading-relaxed" data-aos="fade-left">
         {delicacy.description}
       </p>
 
@@ -225,7 +225,7 @@ const DelicaciesPage = ({ onSelectDelicacy }) => {
     : otherDelicacies.filter(d => d.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white font-sans flex flex-col items-center py-16 px-4 md:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white font-sans flex flex-col items-center py-16 px-4 md:px-8" data-aos="fade-up">
       <h1 className="text-6xl md:text-7xl font-extrabold text-gray-900 mb-4 text-center leading-tight">
         <span className="block text-orange-600">Our</span> Nigerian Delicacies
       </h1>
@@ -237,9 +237,9 @@ const DelicaciesPage = ({ onSelectDelicacy }) => {
       {featuredDelicacy && (
         <div
           className="bg-gradient-to-r from-orange-100 to-orange-50 rounded-3xl shadow-xl flex flex-col lg:flex-row items-center p-8 md:p-12 mb-20 w-full max-w-7xl transform transition-all duration-500 hover:scale-[1.01] cursor-pointer"
-          onClick={() => onSelectDelicacy(featuredDelicacy.id)}
+          onClick={() => onSelectDelicacy(featuredDelicacy.id)} data-aos="fade-in"
         >
-          <div className="relative w-full lg:w-1/2 h-80 md:h-96 lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl mb-8 lg:mb-0 lg:mr-12">
+          <div className="relative w-full lg:w-1/2 h-80 md:h-96 lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl mb-8 lg:mb-0 lg:mr-12" data-aos="fade-up">
             <Image
               src={featuredDelicacy.imageUrl}
               alt={featuredDelicacy.name}
@@ -249,7 +249,7 @@ const DelicaciesPage = ({ onSelectDelicacy }) => {
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl" data-aos="fade-down"></div>
             <span className="absolute bottom-4 left-4 bg-orange-600 text-white text-sm md:text-base font-bold py-2 px-4 rounded-full shadow-lg">
                 Delicacy of the Day!
             </span>
@@ -269,7 +269,7 @@ const DelicaciesPage = ({ onSelectDelicacy }) => {
       )}
 
       {/* Category Filters */}
-      <div className="flex flex-wrap justify-center gap-4 mb-16">
+      <div className="flex flex-wrap justify-center gap-4 mb-16" data-aos="fade-in">
         {categories.map(category => (
           <button
             key={category}
@@ -286,7 +286,7 @@ const DelicaciesPage = ({ onSelectDelicacy }) => {
       </div>
 
       {/* Delicacies Grid */}
-      <div className="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+      <div className="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12" data-aos="zoom-up"> 
         {filteredDelicacies.map((delicacy) => (
           <DelicacyCard key={delicacy.id} delicacy={delicacy} onSelectDelicacy={onSelectDelicacy} />
         ))}
@@ -302,7 +302,7 @@ const VarietyPage = ({ selectedDelicacyId, onSelectVariety, onBack }) => {
 
   if (!delicacy) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-8">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-8" data-aos="fade-in">
         <h2 className="text-4xl font-bold text-red-600 mb-4">Delicacy Not Found!</h2>
         <button
           onClick={onBack}
@@ -315,7 +315,7 @@ const VarietyPage = ({ selectedDelicacyId, onSelectVariety, onBack }) => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white font-sans flex flex-col items-center py-16 px-4 md:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white font-sans flex flex-col items-center py-16 px-4 md:px-8" data-aos="fade-in">
       <button
         onClick={onBack}
         className="self-start mb-8 text-orange-600 hover:text-orange-800 flex items-center transition-colors duration-300"

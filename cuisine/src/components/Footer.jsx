@@ -9,7 +9,7 @@ const Footer = () => {
           <h3 className="text-4xl font-extrabold text-orange-200 mb-4 leading-tight">Book Your Table</h3>
           <p className="text-xl font-semibold mb-2">Make a Reservation</p>
           <p className="text-lg mb-4">
-            Call <a href="tel:+18005551234" className="text-orange-300 hover:underline font-bold">+1 (800) 555-1234</a> from 5a – 11p daily, or book online.
+            Call <a href="tel:+23490349825" className="text-orange-300 hover:underline font-bold">+2349034982572</a> from 8am – 11pm daily, or book online.
           </p>
           <p className="text-sm italic text-gray-300">
             Reservations required for parties of 4 or more.
@@ -21,8 +21,8 @@ const Footer = () => {
 
         {/* Information Links Section */}
         <div className="flex-1 flex flex-col items-center md:items-end space-y-3">
-          <p className="text-base font-semibold">Developed by <span className="text-orange-200 font-bold">ZealousWeb</span></p>
-          <p className="text-base font-semibold">Powered by <span className="text-orange-200 font-bold">Webflow</span></p>
+          <p className="text-base font-semibold">Developed by <span className="text-orange-200 font-bold">PreshCode</span></p>
+          <p className="text-base font-semibold">Powered by <span className="text-orange-200 font-bold">Preshcode</span></p>
           <a href="#" className="text-gray-300 hover:text-white transition-colors text-base">Licenses</a>
           <a href="#" className="text-gray-300 hover:text-white transition-colors text-base">Instructions</a>
         </div>
@@ -30,7 +30,7 @@ const Footer = () => {
 
       {/* Copyright/Brand at the very bottom */}
       <div className="mt-10 pt-6 border-t border-emerald-700 text-center text-gray-400 text-sm">
-        &copy; {new Date().getFullYear()} Zeal Taste. All rights reserved.
+        &copy; {new Date().getFullYear()} PreshCode. All rights reserved.
       </div>
     </footer>
   );
